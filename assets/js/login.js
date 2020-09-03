@@ -27,7 +27,7 @@ $(function(){
          // value :表单值  item.:表单的dom对象  
          // 获取密码的value
           var pwd = $('.reg-box [name=password]').val()  
-          if(pwd !==value){ 
+          if(pwd !== value){ 
               return '两次密码不一致'
           }
       }
@@ -59,7 +59,7 @@ $(function(){
     // 阻止默认提交行为
     e.preventDefault()
     $.ajax({
-      url: '/api/login',
+      url:'/api/login',
       method: 'POST',
       // 快速获取表单中的数据
       data: $(this).serialize(),
